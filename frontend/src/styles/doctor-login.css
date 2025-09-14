@@ -1,0 +1,123 @@
+:root {
+  --bg-1: #0b0f1a;
+  --bg-2: #111827;
+  --txt-1: #e5e7eb;
+  --txt-2: #9ca3af;
+  --brand: #7dd3fc;
+  --error: #ef4444;
+  --ok: #22c55e;
+  --border: rgba(255, 255, 255, 0.08);
+  --card: rgba(255, 255, 255, 0.03);
+  --glow: 0 0 40px rgba(125, 211, 252, 0.15);
+}
+
+/* Page wrapper */
+.doctor-login {
+  min-height: calc(100dvh - 64px);
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+/* Card */
+.doctor-login__card {
+  width: 100%;
+  max-width: 440px;
+  padding: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--glow);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.doctor-login__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 60px rgba(125, 211, 252, 0.12);
+}
+
+/* Typography */
+.doctor-login__title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.doctor-login__subtitle {
+  color: var(--txt-2);
+  margin: 0 0 22px;
+}
+
+/* Messages */
+.doctor-login__message {
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  margin: 0 0 12px; /* consistent spacing under message */
+}
+.doctor-login__message--error { border-color: rgba(239, 68, 68, 0.35); color: #fecaca; }
+.doctor-login__message--ok    { border-color: rgba(34, 197, 94, 0.35); color: #bbf7d0; }
+
+/* Form */
+.doctor-login__form {
+  display: grid;
+  gap: 16px; /* standardized gap between fields */
+}
+.doctor-login__field {
+  display: grid;
+  gap: 8px;  /* label-input spacing */
+}
+.doctor-login__label {
+  font-size: 13px;
+  color: var(--txt-2);
+}
+
+/* Inputs – fix width overflow + consistent height */
+.doctor-login__input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--txt-1);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;  /* ✅ prevents overflowing the card */
+  display: block;
+}
+.doctor-login__input:focus {
+  border-color: rgba(125, 211, 252, 0.5);
+  box-shadow: 0 0 0 4px rgba(125, 211, 252, 0.12);
+}
+
+/* Button with breathing room */
+.doctor-login__button {
+  margin-top: 14px; /* ✅ matches patient forms */
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--brand);
+  color: #0b0f1a;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.2s ease;
+}
+.doctor-login__button:hover { filter: brightness(1.08); }
+.doctor-login__button:active { transform: translateY(1px); }
+
+/* Bottom link row */
+.doctor-login__linkrow {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.doctor-login__link {
+  color: var(--brand);
+  text-decoration: none;
+}
+.doctor-login__link:hover { text-decoration: underline; }

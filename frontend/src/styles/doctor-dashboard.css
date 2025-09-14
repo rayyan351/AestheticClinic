@@ -1,0 +1,170 @@
+.doctor-dashboard {
+  min-height: calc(100dvh - 64px);
+  padding: 20px;
+  color: #e5e7eb;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+/* Toolbar */
+.doctor-dashboard__toolbar {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.doctor-dashboard__title { font-size: 18px; font-weight: 700; }
+.doctor-dashboard__help { font-size: 12px; color: #9ca3af; }
+.doctor-dashboard__btnrow { display: flex; gap: 8px; }
+
+/* Buttons */
+.doctor-dashboard__btn {
+  background: linear-gradient(135deg, #22d3ee, #818cf8);
+  border: none;
+  color: #0b0f1a;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter .2s ease, transform .1s ease;
+}
+.doctor-dashboard__btn:hover { filter: brightness(1.08); }
+.doctor-dashboard__btn:active { transform: translateY(1px); }
+.doctor-dashboard__btn.is-ghost {
+  background: transparent;
+  color: #e5e7eb;
+  border: 1px solid rgba(255,255,255,.16);
+}
+.doctor-dashboard__btn.is-danger {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Cards & sections */
+.doctor-dashboard__section { display: grid; gap: 16px; }
+.doctor-dashboard__card {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+/* Tables */
+.doctor-dashboard__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.doctor-dashboard__table th,
+.doctor-dashboard__table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.doctor-dashboard__table th {
+  background: rgba(255,255,255,.04);
+  color: #cbd5e1;
+  font-weight: 600;
+}
+.doctor-dashboard__empty {
+  opacity: .7;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Badges */
+.doctor-dashboard__badge {
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,.16);
+  text-transform: capitalize;
+}
+.doctor-dashboard__badge.status-pending  { color:#fde68a; border-color: rgba(253,230,138,.5); }
+.doctor-dashboard__badge.status-confirmed{ color:#86efac; border-color: rgba(134,239,172,.5); }
+.doctor-dashboard__badge.status-rejected { color:#fecaca; border-color: rgba(254,202,202,.5); }
+
+/* Forms */
+.doctor-dashboard__form-row {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.doctor-dashboard__form-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.doctor-dashboard__times {
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+}
+.doctor-dashboard__label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+.doctor-dashboard__input,
+.doctor-dashboard__select,
+.doctor-dashboard__textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.02);
+  color: #e5e7eb;
+  outline: none;
+  box-sizing: border-box; /* ✅ prevents overflow */
+}
+.doctor-dashboard__hint {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+.doctor-dashboard__slots { display: grid; gap: 10px; }
+
+.doctor-dashboard__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+.doctor-dashboard__row-actions { display: flex; gap: 8px; }
+
+/* Links */
+.doctor-dashboard__link {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+.doctor-dashboard__link:hover { text-decoration: underline; }
+
+/* Modal */
+.doctor-dashboard__modal-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.55);
+  display: grid; place-items: center;
+  z-index: 50;
+}
+.doctor-dashboard__modal {
+  width: 100%;
+  max-width: 560px;
+  background: rgba(14,18,27,.96);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 20px;
+}
+.doctor-dashboard__modal-title {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.doctor-dashboard__modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.doctor-dashboard__h2 { margin: 0; }
